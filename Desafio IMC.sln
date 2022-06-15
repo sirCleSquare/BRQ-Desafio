@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio IMC", "Desafio IMC.csproj", "{2232738D-CB8C-4DA3-B87E-05BE3B08A425}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2232738D-CB8C-4DA3-B87E-05BE3B08A425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2232738D-CB8C-4DA3-B87E-05BE3B08A425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2232738D-CB8C-4DA3-B87E-05BE3B08A425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2232738D-CB8C-4DA3-B87E-05BE3B08A425}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4684FA9-8EB9-4D78-8E1E-74C6391367CE}
+	EndGlobalSection
+EndGlobal

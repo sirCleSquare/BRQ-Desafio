@@ -1,0 +1,16 @@
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\bin\Debug\net5.0\Desafio IMC.exe
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\bin\Debug\net5.0\Desafio IMC.deps.json
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\bin\Debug\net5.0\Desafio IMC.runtimeconfig.json
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\bin\Debug\net5.0\Desafio IMC.runtimeconfig.dev.json
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\bin\Debug\net5.0\Desafio IMC.dll
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\bin\Debug\net5.0\Desafio IMC.pdb
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\obj\Debug\net5.0\Desafio IMC.csproj.AssemblyReference.cache
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\obj\Debug\net5.0\Desafio IMC.GeneratedMSBuildEditorConfig.editorconfig
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\obj\Debug\net5.0\Desafio IMC.AssemblyInfoInputs.cache
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\obj\Debug\net5.0\Desafio IMC.AssemblyInfo.cs
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\obj\Debug\net5.0\Desafio IMC.csproj.CoreCompileInputs.cache
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\obj\Debug\net5.0\Desafio IMC.dll
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\obj\Debug\net5.0\refint\Desafio IMC.dll
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\obj\Debug\net5.0\Desafio IMC.pdb
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\obj\Debug\net5.0\Desafio IMC.genruntimeconfig.cache
+D:\_ESWCS\CURSOS\22-05 BRQ - Entry Dot Net C#\DESAFIO\Projeto\Desafio IMC\obj\Debug\net5.0\ref\Desafio IMC.dll
