@@ -10,7 +10,7 @@ namespace Desafio_IMC
         static void Main(string[] args)
         {
             string sNome;
-            //string sSexo;
+            string sSexo;
             char cSexo;
             byte bIdade;
             float fAltura;
@@ -29,14 +29,14 @@ namespace Desafio_IMC
 
             Console.Write("Sexo (F/M)".PadRight(15) + ": ");
             cSexo = char.Parse(Console.ReadLine());
-            /*
+
             if (cSexo.ToString() == "F")
                 sSexo = "Feminino";
             else
                 sSexo = "Masculino";
 
             Console.Write(sSexo);
-            */
+
 
             Console.Write("Idade".PadRight(15) + ": ");
             bIdade = byte.Parse(Console.ReadLine());
