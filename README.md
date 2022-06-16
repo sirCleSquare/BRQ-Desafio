@@ -68,7 +68,6 @@ risco de mortalidade.
 acima de 35 O obeso mórbido vive menos, tem alto risco de mortalidade geral
 por diversas causas.
 
-
 Recomendação inicial:
 IMC       Recomendações
 abaixo de 20 Inclua carboidratos simples em sua dieta, além de proteínas -
