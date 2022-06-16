@@ -1,7 +1,7 @@
 # BRQ-Desafio
-Diagnóstico prévio para o programa de emagrecimento
-
 Projeto aos moldes de um TCC - Trabalho de Conclusão de Curso
+
+Diagnóstico prévio para o programa de emagrecimento
 
 StoryTelling
 
@@ -22,7 +22,7 @@ IMC = Peso ÷ (Altura × Altura)
 Sua missão será criar um algoritmo para gerar um diagnóstico prévio para o programa de
 emagrecimento, conforme exemplo abaixo:
 
-Elaborar tela conforme abaixo:
+Elaborar tela conforme exemplo abaixo (aplicação Console):
 
 ---------------------------------------------------------------------------
 DIAGNÓSTICO PRÉVIO
