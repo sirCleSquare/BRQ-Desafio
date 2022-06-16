@@ -72,17 +72,18 @@ por diversas causas.
 
 
 Recomendação inicial:
-IMC       Recomendações
-abaixo de 20 Inclua carboidratos simples em sua dieta, além de proteínas -
+
+IMC				Recomendações
+abaixo de 20 	Inclua carboidratos simples em sua dieta, além de proteínas -
 indispensáveis para ganho de massa magra. Procure um profissional.
 
-entre 20 e 24 Mantenha uma dieta saudável e faça seus exames periódicos.
+entre 20 e 24 	Mantenha uma dieta saudável e faça seus exames periódicos.
 
-entre 25 e 29 Adote um tratamento baseado em dieta balanceada, exercício físico
+entre 25 e 29 	Adote um tratamento baseado em dieta balanceada, exercício físico
 e medicação. A ajuda de um profissional pode ser interessante.
 
-entre 30 e 35 Adote uma dieta alimentar rigorosa, com o acompanhamento de um
+entre 30 e 35 	Adote uma dieta alimentar rigorosa, com o acompanhamento de um
 nutricionista e um médico especialista (endócrino).
 
-acima de 35 Procure com urgência o acompanhamento de um nutricionista para
+acima de 35 	Procure com urgência o acompanhamento de um nutricionista para
 realizar reeducação alimentar, um psicólogo e um médico especialista (endócrino).
