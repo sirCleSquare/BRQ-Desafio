@@ -37,7 +37,7 @@ Categoria: Adulto
 
 IMC Desejável: entre 20 e 24
 
-Resultado IMC: 21,28
+Resultado IMC: 21,59
 
 Riscos: Seu peso está ideal para suas referências.
 
@@ -47,26 +47,29 @@ faça seus exames periódicos.
 
 Informações importantes
 Para criar o Diagnóstico Prévio siga as orientações abaixo:
+
 Cálculo IMC:
-IMC = Peso ÷ (Altura ²)
+IMC = Peso ÷ (Altura * Altura)
+
 Categoria:
 IDADE             CATEGORIA
 Abaixo de 12 anos Infantil
-De 12 a 20 anos Juvenil
-De 21 a 65 anos Adulto
-Acima de 65 anos Idoso
+De 12 a 20 anos 	Juvenil
+De 21 a 65 anos 	Adulto
+Acima de 65 anos 	Idoso
 
 Riscos:
-IMC           RISCO
-abaixo de 20  Muitas complicações de saúde como doenças pulmonares e
+IMC           	RISCO
+abaixo de 20  	Muitas complicações de saúde como doenças pulmonares e
 cardiovasculares podem estar associadas ao baixo peso.
-entre 20 e 24 Seu peso está ideal para suas referências.
-entre 25 e 29 Aumento de peso apresenta risco moderado para outras doenças
+entre 20 e 24 	Seu peso está ideal para suas referências.
+entre 25 e 29 	Aumento de peso apresenta risco moderado para outras doenças
 crônicas e cardiovasculares.
-entre 30 e 35 Quem tem obesidade vai estar mais exposto a doenças graves e ao
+entre 30 e 35 	Quem tem obesidade vai estar mais exposto a doenças graves e ao
 risco de mortalidade.
-acima de 35 O obeso mórbido vive menos, tem alto risco de mortalidade geral
+acima de 35 O 	Obeso mórbido vive menos, tem alto risco de mortalidade geral
 por diversas causas.
+
 
 Recomendação inicial:
 IMC       Recomendações
