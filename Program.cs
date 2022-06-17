@@ -11,7 +11,7 @@ namespace Desafio_IMC
          AUTOR      : Valtécio CS
          TAREFAS    : Tela; Digitação de dados; Cálculos; Exibição de resultados; validação de campos
          PENDÊNCIAS : 
-         VERSÃO     : 9.4d
+         VERSÃO     : 9.5
         */
         static void Main(string[] args)
         {
@@ -208,7 +208,7 @@ namespace Desafio_IMC
 
                         if (!padrao.IsMatch(sNome))
                         {
-                            Console.Write("ERRO: Digite somente letras ou espaços. [ENTER] para continuar ");
+                            Console.Write("ERRO: Digite somente letras e espaços. [ENTER] para continuar ");
                             Console.ReadLine();
                             bValidaCampo = false;
                         }
@@ -226,7 +226,7 @@ namespace Desafio_IMC
 
                 if (sSexo.Trim().ToUpper() != "F" && sSexo.Trim().ToUpper() != "M")
                 {
-                    Console.Write("ERRO: Sexo inválido (F/f:Feminino ou M/m;Masculino). [ENTER] para continuar ");
+                    Console.Write("ERRO: Sexo inválido (F/f:Feminino ou M/m:Masculino). [ENTER] para continuar ");
                     Console.ReadLine();
 
                     bValidaCampo = false;
@@ -239,8 +239,6 @@ namespace Desafio_IMC
             static bool ValidaIdade(int idade)
             {
                 bool bValidaCampo = true;       // True se validação ocorreu sem encontrar erros
-
-                //iIdade = int.Parse(Console.ReadLine());
 
                 if (!int.TryParse(Console.ReadLine(), out idade))
                 {
