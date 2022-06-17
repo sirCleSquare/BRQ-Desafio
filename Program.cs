@@ -11,7 +11,7 @@ namespace Desafio_IMC
          AUTOR      : Valtécio CS
          TAREFAS    : Tela; Digitação de dados; Cálculos; Exibição de resultados; validação de campos
          PENDÊNCIAS : 
-         VERSÃO     : 9.4
+         VERSÃO     : 9.4d
         */
         static void Main(string[] args)
         {
