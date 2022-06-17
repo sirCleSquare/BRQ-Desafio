@@ -182,7 +182,7 @@ namespace Desafio_IMC
             #endregion
             // ROTINAS / MÉTODOS / FUNÇÕES / PROCEDIMENTOS
 
-            #region VALIDAÇÕES DOS CAMPOS
+            #region Validações de Campos
 
             static bool ValidaNome(string sNome)
             {
