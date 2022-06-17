@@ -4,152 +4,152 @@ namespace Desafio_IMC
 {
     internal class Program
     {
-        // OBJETIVO: Diagnóstico prévio para o programa de emagrecimento
-        // CRIAÇÃO : 14/06/2022
-        // AUTOR   : Valtécio CS
+        /*
+         OBJETIVO   : Diagnóstico prévio para o programa de emagrecimento
+         CRIAÇÃO    : 14/06/2022
+         AUTOR      : Valtécio CS
+         TAREFAS    : Tela; Digitação de dados; Cálculos; Exibição de resultados; validação de campos
+         PENDÊNCIAS : 1)verificar caractere especial no campo nome
+                      2)verificar conversão de tipos para idade e campos float 
+                      3)idade só pode ser inteiro mas está aceitando fracionário mesmo estando dentro dos limites estabelecidos
+         VERSÃO     : 9.1
+        */
         static void Main(string[] args)
         {
             // Notação Húngara para nomeação de variáveis para identificar o tipo de dados
             string sNome;
             string sSexo;
-            byte bIdade;
-            float fAltura;
-            float fPeso;
+            int iIdade = 0;
+            float fAltura = 0;
+            float fPeso = 0;
             float fIMC;
             string sCategoria;
             string sRiscos;
             string sRecomendacaoInicial;
-            bool bValidaCampo;
+            bool bValidaCampos = false;
 
             Console.WriteLine("PARA O PROGRAMA DE EMAGRECIMENTO");
             Console.WriteLine("");
             Console.WriteLine("DIAGNÓSTICO PRÉVIO");
             Console.WriteLine("");
 
-            // DIGITAÇÃO DOS DADOS
+            #region DIGITAÇÃO DOS DADOS/CAMPOS
 
             // Nome
-            bValidaCampo = false;
             do
             {
                 Console.Write("Nome".PadRight(15) + ": ");
                 sNome = Console.ReadLine();
-           
-                if (string.IsNullOrEmpty(sNome))
-                {
-                    Console.Write("ERRO: Informe o nome. [ENTER] para continuar ");
-                    Console.ReadLine();
-                }
-                else
-                // Colocar try exception 
-                //if verificar se é só número  num outro else
-                    bValidaCampo = true;
 
-
-            }while (bValidaCampo == false);
+            } while (ValidaNome(sNome) == false);
 
             // Sexo
-            bValidaCampo = false;
             do
             {
                 Console.Write("Sexo (F/M)".PadRight(15) + ": ");
                 sSexo = Console.ReadLine();
 
-                if (sSexo.Trim().ToUpper() == "F" ||
-                    sSexo.Trim().ToUpper() == "M" )
-
-                    bValidaCampo = true;
-                else
-                    {
-                        Console.Write("ERRO: Sexo inválido (F/f:Feminino ou M/m;Masculino). [ENTER] para continuar ");
-                        Console.ReadLine();
-
-                        bValidaCampo = false;
-                    }
-
-            } while (bValidaCampo == false);
+            } while (ValidaSexo(sSexo) == false);
 
             // Idade
-            bValidaCampo = false;
+            // bValidaCampos = true;
             do
             {
-                Console.Write("Idade".PadRight(15) + ": ");
-                bIdade = byte.Parse(Console.ReadLine());
+                try
+                {
+                    Console.Write("Idade".PadRight(15) + ": ");
+                    iIdade = int.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                }
 
-                if (bIdade >= 1 && bIdade <= 130)
-                    bValidaCampo = true;
-                else
-                    { 
-                        Console.Write("ERRO: Idade fora dos limites (1 e 130). [ENTER] para continuar ");
-                        Console.ReadLine();
-                    }
-
-            } while (bValidaCampo == false);
+            } while (ValidaIdade(iIdade) == false);
 
             // altura em metros
-            bValidaCampo = false;
             do
             {
-                Console.Write("Altura (m)".PadRight(15) + ": ");
-                fAltura = float.Parse(Console.ReadLine());
-
-                if (fAltura >= 0.5 && fAltura <= 2.80)
-                    bValidaCampo = true;
-                else
+                try
                 {
-                    Console.Write("ERRO: Altura fora dos limites (0,5m e 2,80m). [ENTER] para continuar ");
-                    Console.ReadLine();
+                    Console.Write("Altura (m)".PadRight(15) + ": ");
+                    fAltura = float.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
                 }
 
-            } while (bValidaCampo == false);
+            } while (ValidaAltura(fAltura) == false);
 
-            // Peso em Kilogramas
-            bValidaCampo = false;
             do
             {
-                Console.Write("Peso (kg)".PadRight(15) + ": ");
-                fPeso = float.Parse(Console.ReadLine());
-
-                if (fPeso >= 2.5f && fPeso <= 410.0f)
-                    bValidaCampo = true;
-                else
+                try
                 {
-                    Console.Write("ERRO: Peso fora dos limites (2,5 Kg e 410 Kg).  [ENTER] para continuar ");
-                    Console.ReadLine();
+                    Console.Write("Peso (kg)".PadRight(15) + ": ");
+                    fPeso = float.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
                 }
 
-            } while (bValidaCampo == false);
+            } while (ValidaPeso(fPeso) == false);
+
 
             // Categoria
             Console.Write("Categoria".PadRight(15) + ": ");
 
-            if (bIdade < 12)
-                sCategoria = "Infantil";
-            else
-            if (bIdade < 21)
-                sCategoria = "Juvenil";
-            else
-            if (bIdade < 65)
-                sCategoria = "Adulto";
-            else
-            if (bIdade < 130)   // delimitando um limite razoável de idade digitada
-                sCategoria = "Idoso";
-            else
-                sCategoria = "Idade inválida (acima do limite de 130)";
+            switch (iIdade)
+            {
+                case < 12:
+                    sCategoria = "Infantil";
+                    break;
+                case < 21:
+                    sCategoria = "Juvenil";
+                    break;
+                case < 65:
+                    sCategoria = "Adulto";
+                    break;
+                case < 130:
+                    sCategoria = "Idoso";
+                    break;
+                default:
+                    sCategoria = "Idade inválida (acima do limite de 130:";
+                    break;
 
+            }
+            
             Console.Write(sCategoria);
+            #endregion
 
             Console.WriteLine("\n\n");
             Console.WriteLine("IMC Desejável  : Entre 20 e 24");
 
-            // CÁLCULOS
+            #region Cálculos
             fIMC = fPeso / (float)Math.Pow(fAltura, 2);
 
             Console.WriteLine("");
             Console.Write("Resultado IMC".PadRight(15) + ": ");
-            Console.WriteLine(fIMC.ToString("0.00"));
+            Console.Write(fIMC.ToString("0.00")+"   ");
 
-            // Riscos & Recomendação
+            #region algo a mais (não solicitado oficialmente)
+            if (fIMC < 20)
+               Console.Write("[Abaixo do Peso ideal]");
+            else
+            if (fIMC < 25)
+                Console.Write("[Peso Normal]");
+            else
+            if (fIMC < 30)
+                Console.Write("[Excesso de peso]");
+            else
+            if (fIMC < 35)
+                Console.Write("[Obesidade]");
+            else
+                Console.Write("[Super obesidade]");
+            #endregion
+
+            Console.WriteLine("");
+            #endregion
+
+            #region Riscos & Recomendação
             switch (fIMC)
             {
                 case < 20:
@@ -181,6 +181,103 @@ namespace Desafio_IMC
             Console.WriteLine("");
             Console.Write("Recomendação inicial : ");
             Console.WriteLine(sRecomendacaoInicial);
+
+            #endregion
+            // ROTINAS / MÉTODOS / FUNÇÕES / PROCEDIMENTOS
+
+            #region VALIDAÇÕES DE CAMPOS
+
+            static bool ValidaNome(string sNome)
+            {
+                bool bValidaCampo = true;    // True se validação ocorreu sem encontrar erros
+
+                if (sNome.Trim() == "") // se foi digitado pelo menos um espaço em branco ou pressionado o [ENTER]
+                {
+                    Console.Write("ERRO: Informe o nome. [ENTER] para continuar ");
+                    Console.ReadLine();
+                    bValidaCampo = false;
+                }
+                else
+                {
+                    // Verificar se foi digitado algum número (começo, meio, fim)
+                    foreach (char caracter in sNome)
+                    {
+                        if (caracter >= '0' && caracter <= '9')
+                        {
+                            bValidaCampo = false;
+                        }
+                    }
+
+                    if (!bValidaCampo)
+                    {
+                        Console.Write("ERRO: Há pelo menos um número no campo. [ENTER] para continuar ");
+                        Console.ReadLine();
+                    }
+                }
+
+                return bValidaCampo;
+            }
+
+            static bool ValidaSexo(string sSexo)
+            {
+                bool bValidaCampo = true;      // True se validação ocorreu sem encontrar erros
+
+                if (sSexo.Trim().ToUpper() != "F" && sSexo.Trim().ToUpper() != "M")
+                {
+                    Console.Write("ERRO: Sexo inválido (F/f:Feminino ou M/m;Masculino). [ENTER] para continuar ");
+                    Console.ReadLine();
+
+                    bValidaCampo = false;
+                }
+
+                return bValidaCampo;
+
+            }
+
+            static bool ValidaIdade(int idade)
+            {
+                bool bValidaCampo = true;	    // True se validação ocorreu sem encontrar erros
+
+                if (idade < 1 || idade > 130)  // Limites considerados aceitáveis
+                {
+                    Console.Write("ERRO: Idade fora dos limites (1 e 130). [ENTER] para continuar ");
+                    Console.ReadLine();
+                    bValidaCampo = false;
+                }
+
+                return bValidaCampo;
+            }
+
+            static bool ValidaAltura(float altura)
+            {
+                bool bValidaCampo = true;	    // True se validação ocorreu sem encontrar erros
+
+                if (altura < 0.5 || altura > 2.70)  // Limites considerados aceitáveis
+                {
+                    Console.Write("ERRO: Altura fora dos limites (0,5m e 2,80m). [ENTER] para continuar ");
+                    Console.ReadLine();
+                    bValidaCampo = false;
+                }
+
+                return bValidaCampo;
+
+            }
+
+            static bool ValidaPeso(float peso)
+            {
+                bool bValidaCampo = true;	    // True se validação ocorreu sem encontrar erros
+
+                if (peso < 0.5f || peso > 410.0f)   // Limites considerados aceitáveis
+                {
+                    Console.Write("ERRO: Peso fora dos limites (0,5 Kg e 410 Kg).  [ENTER] para continuar ");
+                    Console.ReadLine();
+                    bValidaCampo = false;
+                }
+                
+                return bValidaCampo;
+
+            }
+            #endregion
 
         }
 
