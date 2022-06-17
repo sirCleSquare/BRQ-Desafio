@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace Desafio_IMC
 {
@@ -9,10 +10,8 @@ namespace Desafio_IMC
          CRIAÇÃO    : 14/06/2022
          AUTOR      : Valtécio CS
          TAREFAS    : Tela; Digitação de dados; Cálculos; Exibição de resultados; validação de campos
-         PENDÊNCIAS : 1)verificar caractere especial no campo nome
-                      2)verificar conversão de tipos para idade e campos float 
-                      3)idade só pode ser inteiro mas está aceitando fracionário mesmo estando dentro dos limites estabelecidos
-         VERSÃO     : 9.1
+         PENDÊNCIAS : 
+         VERSÃO     : 9.4
         */
         static void Main(string[] args)
         {
@@ -26,9 +25,8 @@ namespace Desafio_IMC
             string sCategoria;
             string sRiscos;
             string sRecomendacaoInicial;
-            bool bValidaCampos = false;
 
-            Console.WriteLine("PARA O PROGRAMA DE EMAGRECIMENTO");
+            Console.WriteLine("PROGRAMA DE EMAGRECIMENTO");
             Console.WriteLine("");
             Console.WriteLine("DIAGNÓSTICO PRÉVIO");
             Console.WriteLine("");
@@ -52,13 +50,12 @@ namespace Desafio_IMC
             } while (ValidaSexo(sSexo) == false);
 
             // Idade
-            // bValidaCampos = true;
             do
             {
                 try
                 {
-                    Console.Write("Idade".PadRight(15) + ": ");
-                    iIdade = int.Parse(Console.ReadLine());
+                    Console.Write("Idade (anos)".PadRight(15) + ": ");
+
                 }
                 catch (Exception)
                 {
@@ -185,13 +182,13 @@ namespace Desafio_IMC
             #endregion
             // ROTINAS / MÉTODOS / FUNÇÕES / PROCEDIMENTOS
 
-            #region VALIDAÇÕES DE CAMPOS
+            #region VALIDAÇÕES DOS CAMPOS
 
             static bool ValidaNome(string sNome)
             {
-                bool bValidaCampo = true;    // True se validação ocorreu sem encontrar erros
+                bool bValidaCampo = true;   // True se validação ocorreu sem encontrar erros
 
-                if (sNome.Trim() == "") // se foi digitado pelo menos um espaço em branco ou pressionado o [ENTER]
+                if (sNome.Trim() == "")     // Se foi digitado pelo menos um espaço em branco ou pressionado o [ENTER]
                 {
                     Console.Write("ERRO: Informe o nome. [ENTER] para continuar ");
                     Console.ReadLine();
@@ -199,20 +196,25 @@ namespace Desafio_IMC
                 }
                 else
                 {
-                    // Verificar se foi digitado algum número (começo, meio, fim)
-                    foreach (char caracter in sNome)
+                    if (sNome.Length > 60)
                     {
-                        if (caracter >= '0' && caracter <= '9')
+                        Console.Write("ERRO: Tamanho máximo é 60 caracteres. [ENTER] para continuar ");
+                        Console.ReadLine();
+                        bValidaCampo = false;
+                    }
+                    else
+                    {
+                        Regex padrao = new Regex(@"[A-Za-z]");
+
+                        if (!padrao.IsMatch(sNome))
                         {
+                            Console.Write("ERRO: Digite somente letras ou espaços. [ENTER] para continuar ");
+                            Console.ReadLine();
                             bValidaCampo = false;
                         }
+
                     }
 
-                    if (!bValidaCampo)
-                    {
-                        Console.Write("ERRO: Há pelo menos um número no campo. [ENTER] para continuar ");
-                        Console.ReadLine();
-                    }
                 }
 
                 return bValidaCampo;
@@ -236,14 +238,23 @@ namespace Desafio_IMC
 
             static bool ValidaIdade(int idade)
             {
-                bool bValidaCampo = true;	    // True se validação ocorreu sem encontrar erros
+                bool bValidaCampo = true;       // True se validação ocorreu sem encontrar erros
 
-                if (idade < 1 || idade > 130)  // Limites considerados aceitáveis
+                //iIdade = int.Parse(Console.ReadLine());
+
+                if (!int.TryParse(Console.ReadLine(), out idade))
                 {
-                    Console.Write("ERRO: Idade fora dos limites (1 e 130). [ENTER] para continuar ");
+                    Console.Write("ERRO: Digite apenas números inteiros. [ENTER] para continuar ");
                     Console.ReadLine();
                     bValidaCampo = false;
                 }
+                else
+                    if (idade < 1 || idade > 130)   // Limites considerados aceitáveis
+                    {
+                        Console.Write("ERRO: Idade fora dos limites (1 e 130). [ENTER] para continuar ");
+                        Console.ReadLine();
+                        bValidaCampo = false;
+                    }
 
                 return bValidaCampo;
             }
@@ -252,9 +263,9 @@ namespace Desafio_IMC
             {
                 bool bValidaCampo = true;	    // True se validação ocorreu sem encontrar erros
 
-                if (altura < 0.5 || altura > 2.70)  // Limites considerados aceitáveis
+                if (altura < 0.2 || altura > 2.70)  // Limites considerados aceitáveis
                 {
-                    Console.Write("ERRO: Altura fora dos limites (0,5m e 2,80m). [ENTER] para continuar ");
+                    Console.Write("ERRO: Altura fora dos limites (0,2m e 2,80m). [ENTER] para continuar ");
                     Console.ReadLine();
                     bValidaCampo = false;
                 }
