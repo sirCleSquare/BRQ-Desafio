@@ -11,7 +11,7 @@ namespace Desafio_IMC
          AUTOR      : Valtécio CS
          TAREFAS    : Tela; Digitação de dados; Cálculos; Exibição de resultados; validação de campos
          PENDÊNCIAS : 
-         VERSÃO     : 9.5
+         VERSÃO     : 9.51
         */
         static void Main(string[] args)
         {
@@ -55,13 +55,12 @@ namespace Desafio_IMC
                 try
                 {
                     Console.Write("Idade (anos)".PadRight(15) + ": ");
-
                 }
                 catch (Exception)
                 {
                 }
 
-            } while (ValidaIdade(iIdade) == false);
+            } while (ValidaIdade(ref iIdade) == false);
 
             // altura em metros
             do
@@ -89,7 +88,6 @@ namespace Desafio_IMC
                 }
 
             } while (ValidaPeso(fPeso) == false);
-
 
             // Categoria
             Console.Write("Categoria".PadRight(15) + ": ");
@@ -236,7 +234,7 @@ namespace Desafio_IMC
 
             }
 
-            static bool ValidaIdade(int idade)
+            static bool ValidaIdade(ref int idade)
             {
                 bool bValidaCampo = true;       // True se validação ocorreu sem encontrar erros
 
